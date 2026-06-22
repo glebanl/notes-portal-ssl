@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 · 用户指南与能力简介</title>
+    <style>
+        /* ----- 重置与全局 ----- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.65;
+            color: #1e2229;
+            padding: 2rem 1.2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        /* ----- 卡片体系 ----- */
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e6eaef;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.6rem;
+            transition: box-shadow 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 3px 9px rgba(0,0,0,0.05), 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        /* ----- 标题层次 ----- */
+        .site-title {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #0b1a2b;
+        }
+
+        .page-sub {
+            font-size: 0.95rem;
+            color: #5b677a;
+            margin-top: -0.1rem;
+            margin-bottom: 1.4rem;
+            border-left: 3px solid #9aaec9;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.6rem 0 0.9rem 0;
+            color: #13273e;
+            border-bottom: 1px solid #eef1f5;
+            padding-bottom: 0.4rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem 0;
+            color: #1f334a;
+        }
+
+        /* ----- 正文排版 ----- */
+        p {
+            margin: 0 0 1rem 0;
+            text-align: justify;
+        }
+
+        .intro-lead {
+            font-size: 1.05rem;
+            color: #2a384b;
+            font-weight: 450;
+            background: #f8fafc;
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            border-left: 4px solid #3f6b9c;
+            margin: 1rem 0 1.6rem 0;
+        }
+
+        .insight-quote {
+            background: #eef3f9;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-style: normal;
+            color: #1f3857;
+            border: 1px solid #d7e0ec;
+            margin: 1.6rem 0;
+            position: relative;
+        }
+
+        .insight-quote::before {
+            content: "💡 使用提示";
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            color: #3f6b9c;
+            margin-bottom: 0.3rem;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.9rem;
+            margin: 1rem 0 0.2rem 0;
+            list-style: none;
+        }
+
+        .tag-list li {
+            background: #edf2f8;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 470;
+            color: #1b3a5c;
+        }
+
+        /* ----- 链接（仅核心入口） ----- */
+        a {
+            color: #1d5b99;
+            text-decoration: none;
+            border-bottom: 1px solid #b7cee8;
+            font-weight: 500;
+            transition: border-color 0.2s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0a3b6b;
+            border-bottom-color: #1d5b99;
+        }
+
+        .faq-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        .faq-item {
+            background: #fafcff;
+            border: 1px solid #e1e8f0;
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-size: 0.9rem;
+            color: #1f3d60;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item span {
+            font-size: 0.85rem;
+            color: #425a75;
+        }
+
+        /* ----- 响应式 ----- */
+        @media (max-width: 640px) {
+            body { padding: 1.2rem 0.9rem; }
+            .card { padding: 1.2rem 1rem; }
+            .site-title { font-size: 1.5rem; }
+            .faq-summary { grid-template-columns: 1fr; }
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #dbe2ec;
+            margin: 1.6rem 0 0.6rem 0;
+        }
+
+        .footnote {
+            font-size: 0.8rem;
+            color: #6b7b91;
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 标题区：简洁 无冗余装饰 -->
+    <div class="card" style="padding-bottom: 1.2rem;">
+        <div class="site-title">mk体育 · 用户导向简介</div>
+        <div class="page-sub">从使用场景快速判断平台定位</div>
+        <p style="margin-top: 1rem; font-size: 0.93rem; color: #2a3b4f;">
+            当你第一次打开一个体育类管理页面，最直接的需求往往是：<strong>它解决什么问题？数据是否直观？操作路径是否清晰？</strong> 
+            以下从实际使用视角梳理 <a href="https://cn-panel-mksport.com">mk体育</a> 的核心能力与界面逻辑，帮助你高效评估。
+        </p>
+    </div>
+
+    <!-- 第一段：身份认知 与 核心界面 -->
+    <div class="card">
+        <h2>从首页判断平台属性</h2>
+        <p>
+            <a href="https://cn-panel-mksport.com">mk体育</a> 并非面向普通观众的资讯站，而是一套面向运营人员与后台管理者的体育数据面板。 
+            页面顶部通常呈现关键指标卡片（如赛事总数、实时在线、异常告警），中部为多维度筛选列表，底部则提供日志与操作入口。 
+            这种布局意味着用户可在 5 秒内识别当前系统状态——无论是赛事调度、用户管理还是数据审计，均通过模块化卡片实现。
+        </p>
+        <p>
+            对首次使用者而言，建议先观察导航栏左侧的「看板」与「统计」分区，它们直接反映了该实例当前最活跃的数据维度。 
+            如果页面加载后出现「等待数据同步」状态，属于正常机制，表明后端正在拉取最新赛事流。
+        </p>
+        <div class="insight-quote">
+            多数管理页面会隐藏高级筛选器，<a href="https://cn-panel-mksport.com">mk体育</a> 则将其直接置于列表上方。 
+            若你看到「快速过滤」栏（常见于右侧栏），可尝试按联赛、日期或状态折叠视图，这是提升检索效率的首个技巧。
+        </div>
+    </div>
+
+    <!-- 第二段：功能特性 / 使用场景 -->
+    <div class="card">
+        <h2>典型使用场景与提示</h2>
+        <p>
+            基于对同类后台的观察，<a href="https://cn-panel-mksport.com">mk体育</a> 在以下三个场景中差异明显：
+        </p>
+        <ul class="tag-list">
+            <li>⚽ 多联赛实时滚动</li>
+            <li>📊 自定义列配置</li>
+            <li>⏱ 操作日志回溯</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+            <strong>场景一 · 批量核对赛事</strong><br>
+            当同时追踪 10+ 场联赛时，建议使用「冻结首列」功能（通常隐藏于表格设置内），避免横向滚动时丢失主键信息。 
+            该面板对宽屏适配较好，但 1366px 以下分辨率可能会出现横向滚动条，可通过浏览器缩放调整。
+        </p>
+        <p>
+            <strong>场景二 · 权限与操作追溯</strong><br>
+            管理后台的「日志」模块常被低估。<a href="https://cn-panel-mksport.com">mk体育</a> 的审计日志默认按时间倒序排列， 
+            支持按操作者、IP 或动作类型筛选。若你发现某条数据异常，可从此处快速定位最后修改人与修改时间，无需翻查数据库。
+        </p>
+        <h3>关于响应式与移动端</h3>
+        <p>
+            虽然面板优先为桌面设计，但在手机浏览器上仍可呈现核心指标卡片。若你经常需要通过移动设备快速查看状态， 
+            建议将浏览器设为「桌面版网站」模式，此时卡片布局不会变形，但表格内文字会适当缩小。
+        </p>
+    </div>
+
+    <!-- 第三段：引用 / 深层使用建议 -->
+    <div class="card">
+        <h2>从界面细节理解设计意图</h2>
+        <p>
+            很多用户忽略页面左上角的时间同步标识。若该标识显示为绿色且带有秒数跳动，表明 WebSocket 连接正常，数据延迟小于 1 秒； 
+            若显示为灰色或黄色，则可能处于轮询模式（通常每 30 秒刷新一次）。<a href="https://cn-panel-mksport.com">mk体育</a> 
+            在连接不稳定时会自动降级，但不会丢失已加载的数据——这种容错机制对长期值守场景尤为重要。
+        </p>
+        <div style="background: #f7f9fd; border-radius: 10px; padding: 0.8rem 1.2rem; margin: 1.4rem 0;">
+            <p style="margin-bottom: 0.2rem; font-weight: 500; color: #1d3b5a;">🧩 快速识别技巧</p>
+            <p style="font-size: 0.92rem; margin-bottom: 0;">如果页面默认显示「今日概览」且包含折线图，即表示该实例已配置数据聚合服务；若只有纯表格，说明当前为轻量模式，可通过右上角设置开启图表模块。</p>
+        </div>
+        <p>
+            另外，所有列表页几乎都支持「批量操作」复选框——在行首勾选后，顶部会出现操作栏（如批量导出、状态变更）。 
+            该交互符合主流后台习惯，但部分新手容易忽略选中后的浮动栏，建议操作前先确认工具栏是否已激活。
+        </p>
+    </div>
+
+    <!-- FAQ 摘要卡片 -->
+    <div class="card">
+        <h2>常见疑惑摘要</h2>
+        <div class="faq-summary">
+            <div class="faq-item">
+                <strong>是否支持多语言？</strong>
+                <span>当前界面以中文为主，部分字段保留英文标识（如 API 状态码），不影响日常操作。</span>
+            </div>
+            <div class="faq-item">
+                <strong>数据刷新频率？</strong>
+                <span>实时赛事数据通过 WebSocket 推送，平均延迟低于 0.8 秒；统计报表每 5 分钟全量更新。</span>
+            </div>
+            <div class="faq-item">
+                <strong>能否导出报表？</strong>
+                <span>列表右上角通常提供 CSV / Excel 导出按钮，部分自定义视图需预先保存筛选条件。</span>
+            </div>
+            <div class="faq-item">
+                <strong>页面空白如何处理？</strong>
+                <span>先检查浏览器是否拦截了跨域请求，或等待 10 秒后刷新。若持续空白，可联系实例管理员确认服务端口状态。</span>
+            </div>
+        </div>
+        <p style="font-size: 0.9rem; margin-top: 1rem; color: #456180;">
+            以上摘要基于通用面板逻辑总结，具体行为以实际部署版本为准。进入 <a href="https://cn-panel-mksport.com">mk体育</a> 后，可通过页面右下角的「?」图标查看当前实例的专属指南。
+        </p>
+    </div>
+
+    <!-- 尾注：信息克制 无诱导 -->
+    <hr>
+    <div class="footnote">
+        本文档仅从用户视角介绍界面功能与常见识别方式，不构成任何形式的使用承诺或性能保证。<br>
+        所有描述基于通用管理后台设计模式，具体页面以实际部署版本为准。
+    </div>
+
+</div>
+</body>
+</html>
